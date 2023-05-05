@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.logo {
+  height: 155;
+  width: 100%;
+  text-align: center;
+}
+
+.head h1 {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.head {
+  margin-top: 55px;
+  margin-bottom: 40px;
+}
+
+.head p {
+  font-weight: normal;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.nav ul li {
+  list-style: none;
+  display: flex;
+}
