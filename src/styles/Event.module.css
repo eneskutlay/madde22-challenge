@@ -41,7 +41,7 @@
   height: 22px;
   padding: 0 20px;
   z-index: 3;
-  position: fixed;
+  position: absolute;
   margin-top: 16px;
   margin-left: -16px;
   background: #9fae5d;
@@ -115,20 +115,26 @@
     width: 344px;
     height: 212px;
     color: #ff0d87;
-    position: fixed;
+    position: absolute;
     z-index: 0;
   }
+  .eventItemPosterFlag {
+    position: absolute;
+  }
+
   .eventItemDate {
     width: 135px;
     height: 40px;
     margin: 5px auto 9px auto;
+    text-align: center;
   }
 
   .eventItemDate span {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 40px;
     color: #dfdfdf;
+    height: auto;
   }
 
   .eventItemPoster {
@@ -178,7 +184,7 @@
     font-size: 16px;
     line-height: 28px;
   }
-  
+
   .celenderBox {
     display: flex;
     flex-direction: row;
