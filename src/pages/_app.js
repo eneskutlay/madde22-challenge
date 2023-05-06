@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import localFont from "next/font/local";
+import Layout from "@/components/Layout";
 
 const galano = localFont({
   src: [
@@ -18,8 +19,8 @@ const galano = localFont({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={galano.className}>
+    <Layout className={galano.className} fontClassName={galano.className}>
       <Component {...pageProps} />
-    </main>
+    </Layout>
   );
 }
