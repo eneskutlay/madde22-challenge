@@ -33,7 +33,7 @@ function FliterNav() {
           <div className={styles.filterIcon}>
             <Image
               src={isFilterBoxOpen ? "/activeFliter.svg" : "/fliter.svg"}
-              alt="logo"
+              alt="fliter icon"
               width={10}
               height={18}
             />
@@ -45,7 +45,7 @@ function FliterNav() {
           </span>
         </div>
         <div className={styles.fliterNavContainerRight}>
-          <Image src="/calendar.svg" alt="logo" width={24} height={24} />
+          <Image src="/calendar.svg" alt="calendar icon" width={24} height={24} />
           <span>Takvimde Gör</span>
         </div>
       </div>
