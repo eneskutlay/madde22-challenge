@@ -44,3 +44,29 @@
   list-style: none;
   display: flex;
 }
+
+/* for mobile */
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    justify-content: unset;
+    padding-bottom: 4%;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .nav ul li {
+    list-style: none;
+    display: flex;
+  }
+}
