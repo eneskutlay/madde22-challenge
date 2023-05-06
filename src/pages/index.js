@@ -36,5 +36,3 @@ export const getStaticProps = async () => {
     },
   };
 };
-
-<Event />;
