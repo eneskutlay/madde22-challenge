@@ -71,7 +71,9 @@ function FilterNav({ selectedFilters, setSelectedFilters }) {
             width={24}
             height={24}
           />
-          <span>Takvimde Gör</span>
+          <span onClick={() => alert("Takvimi Şu Anda Görüntüleyemiyoruz")}>
+            Takvimde Gör
+          </span>
         </div>
       </div>
       {isFilterBoxOpen && (

@@ -97,6 +97,7 @@
   flex-direction: row;
   margin-top: 12px;
   gap: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

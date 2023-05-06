@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Event.module.css";
 import Image from "next/image";
 
 function Event(props) {
+  const [isClickedCalendar, setIsClickedCalendar] = useState(false);
+  const [isClickedBuy, setIsClickedBuy] = useState(false);
+
+  function handleCalendarClick() {
+    setIsClickedCalendar(true);
+    if (isClickedCalendar) {
+      setIsClickedCalendar(false);
+    }
+  }
+
+  function handleBuyClick() {
+    setIsClickedBuy(true);
+    if (isClickedBuy) {
+      setIsClickedBuy(false);
+    }
+  }
   return (
     <div className={styles.event}>
       <div className={styles.eventItem}>
@@ -35,10 +51,31 @@ function Event(props) {
           <p>{props.eventDetail}</p>
         </div>
         <div className={styles.eventItemRight}>
-          <button className={styles.eventItemBuyTicket}>Bilet Al</button>
-          <div className={styles.celenderBox}>
-            <button clas>
-              <Image src="/addIcon.svg" alt="add icon" width={22} height={22} />
+          <div onClick={handleBuyClick} className={styles.buyBox}>
+            {isClickedBuy ? (
+              <button className={styles.eventItemBuyTicket}>
+                <Image
+                  src="/ticketBag.svg"
+                  alt="add icon"
+                  width={22}
+                  height={22}
+                  color="#fff"
+                  style={{ marginTop: "5px" }}
+                />
+              </button>
+            ) : (
+              <button className={styles.eventItemBuyTicket}>Bilet Al</button>
+            )}
+          </div>
+
+          <div className={styles.celenderBox} onClick={handleCalendarClick}>
+            <button>
+              <Image
+                src={isClickedCalendar ? "/clickedIcon.svg" : "/addIcon.svg"}
+                alt="add icon"
+                width={22}
+                height={22}
+              />
             </button>
             <span>Takvime Ekle</span>
           </div>
