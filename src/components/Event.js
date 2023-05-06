@@ -38,7 +38,13 @@ function Event(props) {
           />
         </div>
         <div className={styles.eventItemCenter}>
-          <h3>{props.eventHeader}</h3>
+          <h3
+            style={
+              isClickedCalendar ? { color: "#F19653" } : { color: "#000000" }
+            }
+          >
+            {props.eventHeader}
+          </h3>
           <div className={styles.eventItemLocation}>
             <Image
               src="/location.svg"
