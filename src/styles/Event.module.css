@@ -1,0 +1,190 @@
+.event {
+  display: flex;
+  margin-top: 60px;
+}
+
+.eventItem {
+  display: flex;
+  flex-direction: row;
+  width: 1064px;
+  height: 204px;
+  border: 1px solid #dedede;
+}
+
+.eventItemLeft {
+  background-color: #000;
+  width: 204px;
+  height: 100%;
+  color: #ff0d87;
+}
+
+.eventItemDate {
+  width: 32px;
+  height: 96px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 37px;
+  margin-top: 43px;
+  font-weight: 700;
+}
+
+.eventItemPoster {
+  width: 308px;
+  height: 172px;
+  z-index: 2;
+  margin-left: -10%;
+  margin-top: 16px;
+}
+
+.eventItemPosterFlag {
+  width: 95px;
+  height: 22px;
+  padding: 0 20px;
+  z-index: 3;
+  position: fixed;
+  margin-top: 16px;
+  margin-left: -16px;
+  background: #9fae5d;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.eventItemCenter {
+  display: flex;
+  flex-direction: column;
+  width: 416px;
+  height: 148px;
+  margin-top: 29px;
+  margin-left: 16px;
+  gap: 10px;
+}
+
+.eventItemLocation {
+  display: flex;
+  width: 382px;
+  height: 24px;
+  color: #9c9c9c;
+  align-items: center;
+  gap: 7px;
+}
+
+.eventItemRight {
+  display: flex;
+  flex-direction: column;
+  margin-left: 33px;
+  margin-top: 60px;
+  height: 330px;
+  width: 166px;
+}
+
+.eventItemBuyTicket {
+  width: 100%;
+  height: 48px;
+  background-color: #ea3686;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.celenderBox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .event {
+    margin-top: 16px;
+  }
+  .eventItem {
+    display: flex;
+    flex-direction: column;
+    width: 344px;
+    height: 410px;
+    border: 1px solid #dedede;
+  }
+  .eventItemLeft {
+    display: flex;
+    background-color: #000;
+    width: 344px;
+    height: 212px;
+    color: #ff0d87;
+    position: fixed;
+    z-index: 0;
+  }
+  .eventItemDate {
+    width: 135px;
+    height: 40px;
+    margin: 5px auto 9px auto;
+  }
+
+  .eventItemDate span {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #dfdfdf;
+  }
+
+  .eventItemPoster {
+    width: 311px;
+    height: 173px;
+    z-index: 2;
+    margin-top: 54px;
+    margin-left: 16px;
+  }
+
+  .eventItemCenter {
+    display: flex;
+    flex-direction: column;
+    width: 295px;
+    height: 148px;
+    margin: 10px auto 0 auto;
+    gap: 10px;
+  }
+
+  .eventItemCenter p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 277px;
+    height: 26px;
+  }
+
+  .eventItemLocation {
+    display: none;
+  }
+
+  .eventItemRight {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 16px 19px 16px;
+    height: 50px;
+    width: 300px;
+    gap: 10px;
+  }
+  .eventItemBuyTicket {
+    width: 147px;
+    height: 48px;
+    background-color: #ea3686;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  
+  .celenderBox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
