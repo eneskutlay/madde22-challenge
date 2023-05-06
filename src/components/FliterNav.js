@@ -52,21 +52,26 @@ function FliterNav() {
       {isFilterBoxOpen && (
         <div className={styles.filterBackdrop}>
           <div className={styles.filterBox} ref={filterBoxRef}>
+            <h3>Etkinlik Mekanı</h3>
             <div className={styles.checkboxItem}>
               <input type="checkbox" id="filter1" name="filter1" />
-              <label htmlFor="filter1">Filter 1</label>
+              <label htmlFor="filter1">Maximum Uniq Hall</label>
             </div>
             <div className={styles.checkboxItem}>
               <input type="checkbox" id="filter2" name="filter2" />
-              <label htmlFor="filter2">Filter 2</label>
+              <label htmlFor="filter2">Maximum Uniq Box</label>
             </div>
             <div className={styles.checkboxItem}>
               <input type="checkbox" id="filter3" name="filter3" />
-              <label htmlFor="filter3">Filter 3</label>
+              <label htmlFor="filter3">Maximum Uniq Lounge</label>
             </div>
             <div className={styles.checkboxItem}>
               <input type="checkbox" id="filter4" name="filter4" />
-              <label htmlFor="filter4">Filter 4</label>
+              <label htmlFor="filter4">Maximum Uniq Açıkhava</label>
+            </div>
+            <div className={styles.checkboxItem}>
+              <input type="checkbox" id="filter4" name="filter4" />
+              <label htmlFor="filter4">Bahçe Fuaye</label>
             </div>
           </div>
         </div>

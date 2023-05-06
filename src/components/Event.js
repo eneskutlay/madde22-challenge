@@ -8,7 +8,7 @@ function Event(props) {
       <div className={styles.eventItem}>
         <div className={styles.eventItemLeft}>
           <div className={styles.eventItemDate}>
-            <span>7 Eylül Salı 21:15</span>
+            <span>{props.eventDate}</span>
           </div>
         </div>
         <div className={styles.eventItemPoster}>

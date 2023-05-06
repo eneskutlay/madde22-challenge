@@ -15,6 +15,7 @@ export default function Home({ events }) {
         {events.map((event) => (
           <Event
             key={event.id}
+            eventDate={event.eventDate}
             eventStyle={event.eventStyle}
             eventImageUrl={event.eventImageUrl}
             eventHeader={event.eventHeader}
