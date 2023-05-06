@@ -69,15 +69,31 @@ function Event(props) {
           </div>
 
           <div className={styles.celenderBox} onClick={handleCalendarClick}>
-            <button>
-              <Image
-                src={isClickedCalendar ? "/clickedIcon.svg" : "/addIcon.svg"}
-                alt="add icon"
-                width={22}
-                height={22}
-              />
-            </button>
-            <span>Takvime Ekle</span>
+            {isClickedCalendar ? (
+              <>
+                <button>
+                  <Image
+                    src="/clickedIcon.svg"
+                    alt="add icon"
+                    width={22}
+                    height={22}
+                  />
+                </button>
+                <span>Takvime Eklendi</span>
+              </>
+            ) : (
+              <>
+                <button>
+                  <Image
+                    src="/addIcon.svg"
+                    alt="add icon"
+                    width={22}
+                    height={22}
+                  />
+                </button>
+                <span>Takvime Ekle</span>
+              </>
+            )}
           </div>
         </div>
       </div>
