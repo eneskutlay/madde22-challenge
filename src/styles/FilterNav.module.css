@@ -38,9 +38,11 @@
   .filterNavContainer {
     padding: 13px 20px;
   }
+  /*
   .filterBackdrop {
-    display: none;
+     display: none; 
   }
+  */
 }
 
 .filterBackdrop {
