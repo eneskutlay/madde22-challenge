@@ -1,9 +1,8 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import Header from "@/components/Header";
-import FliterNav from "@/components/FliterNav";
 import Event from "@/components/Event";
-export default function Home() {
+
+export default function Home({ events }) {
   return (
     <>
       <Head>
@@ -13,10 +12,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Header />
-        <FliterNav />
-        <Event />
+        {events.map((event) => (
+          <Event
+            key={event.id}
+            eventStyle={event.eventStyle}
+            eventImageUrl={event.eventImageUrl}
+            eventHeader={event.eventHeader}
+            eventLocation={event.eventLocation}
+            eventDetail={event.eventDetail}
+          />
+        ))}
       </main>
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(`${process.env.API_URL}`);
+  const events = await res.json();
+  return {
+    props: {
+      events,
+    },
+  };
+};
+
+<Event />;
