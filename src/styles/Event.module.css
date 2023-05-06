@@ -1,6 +1,7 @@
 .event {
   display: flex;
   margin-top: 60px;
+  position: relative;
 }
 
 .eventItem {
@@ -47,7 +48,7 @@
   background: #9fae5d;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 22px;
   color: #fff;
 }
