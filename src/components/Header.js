@@ -2,9 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Header.module.css";
-import Search from "./Search";
 
-function Header() {
+function Header({ children }) {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -36,7 +35,7 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <Search />
+        {children}
       </div>
     </div>
   );
