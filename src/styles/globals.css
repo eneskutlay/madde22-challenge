@@ -17,3 +17,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+hr {
+  color: #F5F5F5;
+  height: 1px;
+}
