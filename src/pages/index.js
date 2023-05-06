@@ -1,8 +1,23 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Event from "@/components/Event";
+import FilterNav from "@/components/FilterNav";
 
 export default function Home({ events }) {
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [filteredEvents, setFilteredEvents] = useState(events);
+
+  useEffect(() => {
+    if (selectedFilters.length > 0) {
+      const filtered = events.filter((event) =>
+        selectedFilters.includes(event.eventLocation)
+      );
+      setFilteredEvents(filtered);
+    } else {
+      setFilteredEvents(events);
+    }
+  }, [selectedFilters, events]);
   return (
     <>
       <Head>
@@ -12,7 +27,11 @@ export default function Home({ events }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {events.map((event) => (
+        <FilterNav
+          selectedFilters={selectedFilters}
+          setSelectedFilters={setSelectedFilters}
+        />
+        {filteredEvents.map((event) => (
           <Event
             key={event.id}
             eventDate={event.eventDate}

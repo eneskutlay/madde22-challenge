@@ -1,4 +1,4 @@
-.fliterNav {
+.filterNav {
   position: relative;
   width: 100%;
   background-color: #f5f5f5;
@@ -6,7 +6,7 @@
   display: flex;
 }
 
-.fliterNavContainer {
+.filterNavContainer {
   width: 100%;
   display: flex;
   position: relative;
@@ -21,13 +21,13 @@
   justify-content: center;
 }
 
-.fliterNavContainer > div {
+.filterNavContainer > div {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.fliterNavContainer > div > span {
+.filterNavContainer > div > span {
   padding-left: 13px;
   font-size: small;
   font-weight: normal;
@@ -35,7 +35,7 @@
 }
 
 @media (max-width: 768px) {
-  .fliterNavContainer {
+  .filterNavContainer {
     padding: 13px 20px;
   }
   .filterBackdrop {
