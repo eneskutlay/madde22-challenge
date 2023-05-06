@@ -1,0 +1,85 @@
+.fliterNav {
+  position: relative;
+  width: 100%;
+  background-color: #f5f5f5;
+  margin-top: 16px;
+  display: flex;
+}
+
+.fliterNavContainer {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 83px;
+}
+
+.filterIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fliterNavContainer > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fliterNavContainer > div > span {
+  padding-left: 13px;
+  font-size: small;
+  font-weight: normal;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .fliterNavContainer {
+    padding: 13px 20px;
+  }
+  .filterBackdrop {
+    display: none;
+  }
+}
+
+.filterBackdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.filterBox {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 290px;
+  height: 450px;
+  filter: drop-shadow(0px 4px 50px rgba(81, 81, 81, 0.2));
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+  padding: 32px;
+  margin: 0 4%;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  padding: 9px 0px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.checkboxItem input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  accent-color: #ff0d87;
+  /* secondary 3, dark pink */
+
+  border: 1px solid #e5107c;
+}
