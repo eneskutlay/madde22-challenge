@@ -2,8 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Header.module.css";
+import { useRouter } from "next/router";
 
 function Header({ children }) {
+  const router = useRouter();
+  console.log(router.pathname == "/" ? "activeNavItem" : "ss");
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -16,22 +19,36 @@ function Header({ children }) {
         <nav>
           <ul>
             <li>
-              <Link href="/">Tüm Etkinlikler</Link>
+              <Link
+                style={
+                  router.pathname == "/"
+                    ? {
+                        color: "#FF0D87",
+                        fontWeight: "bold",
+                        borderBottom: "4px solid #FF0D87",
+                        paddingBottom: "22px",
+                      }
+                    : {}
+                }
+                href="/"
+              >
+                Tüm Etkinlikler
+              </Link>
             </li>
             <li>
-              <Link href="/about">Tiyatro</Link>
+              <Link href="/test">Tiyatro</Link>
             </li>
             <li>
-              <Link href="/about">Konser</Link>
+              <Link href="/#">Konser</Link>
             </li>
             <li>
-              <Link href="/about">Stand Up</Link>
+              <Link href="/#">Stand Up</Link>
             </li>
             <li>
-              <Link href="/about">Sinema</Link>
+              <Link href="/#">Sinema</Link>
             </li>
             <li>
-              <Link href="/about">Çocuk</Link>
+              <Link href="/#">Çocuk</Link>
             </li>
           </ul>
         </nav>
