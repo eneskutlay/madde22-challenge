@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 
 function Header({ children }) {
   const router = useRouter();
-  console.log(router.pathname == "/" ? "activeNavItem" : "ss");
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
