@@ -36,7 +36,7 @@ function Header({ children }) {
               </Link>
             </li>
             <li>
-              <Link href="/test">Tiyatro</Link>
+              <Link href="/#">Tiyatro</Link>
             </li>
             <li>
               <Link href="/#">Konser</Link>
